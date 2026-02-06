@@ -1,50 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class shape {
-    public:
-    void draw(){
-        cout<<"Drawing shape\n"<<endl;
-    }
-};
+int main() {
+    int arr[2][2];
 
-class Rectangle : public shape{
-    public:
-    float length, breadth;
-    void area(){
-        cout<<"Enter lenght"<<endl;
-        cin>>length;
-        cout<<"Enter breadth"<<endl;
-        cin>>breadth; 
-        cout<<"Area of rectangle \n"<<length*breadth<<endl;
-    }
-};
+    cout << "Enter elements:\n";
 
-class circle : public Rectangle{
-    public:
-    int r;
-    void shape(){
-        cout<<"Enter the radius:"<<endl;
-        cin>>r;
-    cout<<"Area of circle\n"<<3.14*r*r<<endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cin >> arr[i][j];
+        }
     }
-};
 
-class square : public circle{
-    public:
-    int b;
-    void display(){
-        cout<<"Enter the length of base:"<<endl;
-        cin>>b;
-        cout<<"Area of square\n"<<b*b<<endl;
+    cout << "Array elements:\n";
+
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
     }
-};
 
-int main(){
-    square obj;
-    obj.display();
-    obj.shape();
-    obj.area();
-    obj.draw();
     return 0;
 }
