@@ -1,0 +1,7 @@
+# Ignore compiled binaries
+if_else
+loops
+second
+Strong-no
+a.out
+*.exe
